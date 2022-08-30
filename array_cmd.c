@@ -16,8 +16,10 @@ char **parse_cmd(char *input)
 
     if (input == NULL)
        return NULL;
-    if ((*tokens = malloc(sizeof(char) * BUFFSIZE)) == NULL)
+    if ((tokens = malloc(sizeof(char) * BUFFSIZE)) == NULL)
+    {  perror("hsh");
        return NULL;
+    }
 
     token = _strtok(input, delim);
 
