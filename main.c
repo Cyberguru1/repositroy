@@ -4,19 +4,16 @@ void main(void){
     size_t var;
     char *buff = NULL;
     ssize_t out;
-    char *token;
-    char s[2] = " ";
+    char **token;
 
     
     var = 0;
     printf("$ ");
     out = get_line(&buff, &var, stdin);
-     token = _strtok(buff, s);
-    while (token != NULL){
-        printf("%s\n", token);
-        token = _strtok(NULL, s);
-    }
+    token = parse_cmd(buff); // sotring the output into an array
 
-    printf("%s\n",buff);
-    printf("%zu",out);
+    for (int i = 0; token[i] != NULL; i++) //looping and printing each element
+    {
+        printf("%s\n", token[i]);
+    }
 }

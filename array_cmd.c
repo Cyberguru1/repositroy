@@ -10,7 +10,7 @@ char **parse_cmd(char *input)
 {
     char **tokens, *token;
     int i;
-    char delim[5] = "\n "
+    char delim[5] = "\n ";
 
     i = 0;
 
