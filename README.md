@@ -6,9 +6,13 @@ The only difference is when you print an error, the name of the program must be 
 > ## Example of error with sh:
 
 ` $echo "qwerty" | /bin/sh `
+
 ` /bin/sh: 1: qwerty: not found `
+
 ` $ echo "qwerty" | /bin/../bin/sh `
+
 ` /bin/../bin/sh: 1: qwerty: not found `
+
 ` $ `
 
 > ## Same error with your program hsh:
