@@ -10,7 +10,7 @@ unsigned int check_delimeter(char c, const char *str)
 {
 	unsigned int i;
 
-	for (i = 0; str[i] != '\0'; i++) //checks if c is a null character
+	for (i = 0; str[i] != '\0'; i++) /* checks if c is a null character */
 	{
 		if (c == str[i])
 			return (1);
@@ -27,10 +27,10 @@ unsigned int check_delimeter(char c, const char *str)
 
 char *_strtok(char *str, const char *delim)
 {
-	static char *ts, *nt; //ts - stored token, nt - next token
+	static char *ts, *nt; /* ts - stored token, nt - next token */
 	unsigned int i;
 
-	if (str != NULL) // checks if current string is null
+	if (str != NULL) /* checks if current string is null */
 		nt = str;
 	ts = nt;
 	if (ts == NULL)
@@ -40,7 +40,7 @@ char *_strtok(char *str, const char *delim)
 		if (check_delimeter(ts[i], delim) == 0)
 			break;
 	}
-	if (nt[i] == '\0' || nt[i] == '#')
+	if (nt[i] == '\0' || nt[i] == '#') /* handling comments and EOF */
 	{
 		nt = NULL;
 		return (NULL);
