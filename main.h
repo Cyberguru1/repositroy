@@ -29,6 +29,7 @@ void *_calloc(unsigned int size);
 int _putchar(char c);
 void _strncpy(char *dest, char *src, int n);
 int _strlen(char *s);
+int _atoi(char *s);
 
 
 #endif
