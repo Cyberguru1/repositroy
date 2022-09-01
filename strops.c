@@ -19,7 +19,7 @@ int _putchar(char c)
  * Return: dest of char
  */
 
-char _strncpy(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
     int i;
 
@@ -34,7 +34,7 @@ char _strncpy(char *dest, char *src, int n)
         *(dest + i) = '\0';
         i++;
     }
-    return (dest);
+    return dest;
 
 }
 
