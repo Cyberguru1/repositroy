@@ -30,6 +30,7 @@ int _putchar(char c);
 void _strncpy(char *dest, char *src, int n);
 int _strlen(char *s);
 int _atoi(char *s);
+int _strcmp(char *first_str, char *second_str);
 
 
 #endif
