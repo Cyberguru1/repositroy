@@ -27,6 +27,7 @@ void *_calloc(unsigned int size);
 
 /* strops */
 int _putchar(char c);
+void _puts(char *str);
 void _strncpy(char *dest, char *src, int n);
 int _strlen(char *s);
 int _atoi(char *s);
