@@ -1,1 +1,1 @@
-alias gipu=git add . && git commit -m 'added more strops' && git push
+alias gipu="git add . && git commit -m 'added more strops' && git push"
