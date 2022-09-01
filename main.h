@@ -25,5 +25,7 @@ void free_all(char **ptr, char *line);
 char *_memset(char *str, char fill, unsigned int num);
 void *_calloc(unsigned int size);
 
+/* strops */
+
 
 #endif
