@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * check_delim - Checks If A Character Match Any Char *
+ * check_delimeter - Checks If A Character Match Any Char *
  * @c: Character To Check
  * @str: String To Check
  * Return: 1 Succes, 0 Failed
