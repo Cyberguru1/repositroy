@@ -35,8 +35,6 @@ int _strcmp(char *first_str, char *second_str);
 int _strncmp(char *s1, char *s2, size_t n);
 char *_strndup(char *s1, char *s2);
 
-/* 
-
 
 
 
