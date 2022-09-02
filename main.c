@@ -20,6 +20,7 @@ void main(void){
     if (execve(token[0], token, NULL) == -1)
     {
         perror("Error:");
+        return (NULL);
         
     }
 
