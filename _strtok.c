@@ -54,6 +54,7 @@ char *_strtok(char *str, const char *delim)
 	}
 	if (nt[i] == '\0')
 		nt = NULL;
+
 	else
 	{
 		nt[i] = '\0';
@@ -62,4 +63,5 @@ char *_strtok(char *str, const char *delim)
 			nt = NULL;
 	}
 	return (ts);
+	
 }
