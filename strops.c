@@ -46,7 +46,15 @@ char *_strncpy(char *dest, char *src, int n)
 
 int _strlen(char *s)
 {
+    int i;
 
+    while (*s)
+    {
+        s++;
+        i++;
+    }
+
+    return i;
 }
 
 /**
@@ -68,6 +76,14 @@ int _atoi(char *s)
  */
 void _puts(char *str)
 {
+    int i;
+    i = 0;
+
+    while(*str)
+    {
+        _putchar(str[i]);
+        i++;
+    }
 
 }
 
@@ -81,7 +97,18 @@ void _puts(char *str)
 
 int _strcmp(char *first_str, char *second_str)
 {
+    int i;
 
+    for (i = 0; first_str[i] == second_str[i] && first_str[i]; i++)
+    ;
+
+    if (first_str[i] > second_str[i])
+       return (1);
+    
+    if (first_str[i] < second_str[i])
+        return (-1);
+
+    return (0);
 }
 
 /**
@@ -95,4 +122,50 @@ int _strcmp(char *first_str, char *second_str)
 int _strncmp(char *s1, char *s2, size_t n)
 {
 
+}
+
+/**
+ * _strdup - Duplicate a string
+ * @s1: string1
+ * Return: returns string duplicate
+ */
+ char *_strdup(char *s1)
+ {
+     int i;
+     int x;
+     char *s2;
+
+     i = _strlen(s1);
+
+     if((s2 = malloc(sizeof(char) * (i + 1))) == NULL)
+         return NULL;
+
+     for (x = 0; x < i; x++)
+     {
+         s1[x] = s2[x];
+     }
+     s2[x] = '\0';
+
+    return s2;
+}
+
+/**
+ * _strchr - search for a character in a given str
+ * @c: character to search for
+ * @s: string where the character will be searched
+ * Return: pointer to the first occurence of the character
+ */
+char *_strchr(char *s, char c)
+{
+    unsigned int i = 0;
+
+    for (; *(s + i) != '\0'; i++)
+    {
+        if (*(s + i) == c)
+         return (s + i);
+    }
+
+    if (*(s + i) == c)
+       return (s + i);
+    return ('\0');
 }
