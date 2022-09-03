@@ -1,15 +1,6 @@
 #include "main.h"
 
-int _strlen(char *s)
-{
-    int i;
-    while (*s)
-    {
-        s++;
-        i++;
-    }
-    return i;
-}
+
  char *_strdup(char *s1)
  {
      int i;
