@@ -175,4 +175,10 @@ char *_strchr(char *s, char c)
  * @s: inital prefix
  * @a: substring
  * Return: the number of accepted bytes
- * 
+ */
+int _strspn(char *s, char *a)
+{
+    int i, j, bool;
+    
+    for
+}
