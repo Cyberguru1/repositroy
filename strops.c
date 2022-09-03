@@ -185,7 +185,14 @@ int _strspn(char *s, char *a)
         bool = 1;
         for (j = 0; *(a + j) != '\0'; j++)
         {
-            if (*(s + i)  == )
+            if (*(s + i) == *(a + j))
+            {
+                bool = 0;
+                break;
+            }
         }
+        if (bool == 1)
+         break;
     }
+    return (1);
 }
