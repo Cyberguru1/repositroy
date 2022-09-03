@@ -180,5 +180,12 @@ int _strspn(char *s, char *a)
 {
     int i, j, bool;
     
-    for
+    for (i = 0; *(s + i) != '\0'; i++)
+    {
+        bool = 1;
+        for (j = 0; *(a + j) != '\0'; j++)
+        {
+            if (*(s + i)  == )
+        }
+    }
 }
