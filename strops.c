@@ -285,10 +285,16 @@ void revstr(char *s)
         *(s + x) = temp;
     }
 }
+/**
+ * main - testing function for each function call
+ * void: input is void
+ * Return: returns 0 on sucess
+ */
 
 int main(void)
 {
     char s[] = "name";
+    
     revstr(s);
     _puts(s);
 }
