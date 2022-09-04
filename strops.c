@@ -277,6 +277,11 @@ void revstr(char *s)
     {
         i++;
     }
-
     
+    str = s;
+
+    for (x = 0; x < (i - 1); x++)
+    {
+        
+    }
 }
