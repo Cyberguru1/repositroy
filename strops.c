@@ -263,3 +263,10 @@ int cmpChar(char str1[], const char *del)
 
 /**
  * revstr - reverse an inputed string
+ * @str: input string
+ * Return: void
+ */
+void revstr(char *s)
+{
+    
+}
