@@ -197,4 +197,19 @@ int _strspn(char *s, char *a)
     return (1);
 }
 /**
- * str
+ * _strcat - combines two strings
+ * @s1: first string
+ * @s2: second string
+ * Return: a poniter to a new string
+ */
+char *_strcat(char *s1, char *s2)
+{
+    int i,j;
+    char *s3;
+
+    for (i = 0; *s1 != NULL; i++, s1++)
+    ;
+    for (j = 0; s2 != NULL; j++, s2++)
+    ;
+    
+}
