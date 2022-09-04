@@ -257,5 +257,9 @@ int cmpChar(char str1[], const char *del)
         }
     }
     if (i == k)
-       rer
+       return (1);
+    return (0);
 }
+
+/**
+ * revstr - reverse an inputed string
