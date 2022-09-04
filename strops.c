@@ -278,7 +278,7 @@ void revstr(char *s)
         i++;
     }
 
-    for (x = 0; x < ((i - 1) / 2); x++)
+    for (x = 0; x <= ((i - 1) / 2); x++)
     {
         temp = *(s + (i - x -1));
         *(s + (i - x -1)) =  *(s + x);
@@ -288,7 +288,7 @@ void revstr(char *s)
 
 int main(void)
 {
-    char s[] = "hamzaaaasd";
+    char s[] = "name";
     revstr(s);
     _puts(s);
 }
