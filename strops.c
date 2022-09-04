@@ -280,8 +280,8 @@ void revstr(char *s)
     
     str = s;
 
-    for (x = 0; x < (i - 1); x++)
+    for (x = 0; x < ((i - 1) / 2); x++)
     {
-        
+        temp = *(s)
     }
 }
