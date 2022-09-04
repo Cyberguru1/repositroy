@@ -204,12 +204,27 @@ int _strspn(char *s, char *a)
  */
 char *_strcat(char *s1, char *s2)
 {
-    int i,j;
+    int i,j,k;
     char *s3;
+    k = 0;
 
     for (i = 0; *s1 != NULL; i++, s1++)
     ;
     for (j = 0; s2 != NULL; j++, s2++)
     ;
-    
+
+    s3 = malloc(sizeof(char) * (i + j + 1));
+
+    while (k++ < (i + j))
+    {
+        if (k <= i)
+        {
+            s3[k] = s1[k];
+        }
+
+        s3[k] = s2[k];
+    }
+    s3[k] = '\0';
+
+    return s3;
 }
