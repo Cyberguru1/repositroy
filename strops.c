@@ -268,5 +268,15 @@ int cmpChar(char str1[], const char *del)
  */
 void revstr(char *s)
 {
+    int i, x;
+    char temp, *str;
+    
+    i = 0; 
+
+    while (s[i] != '\0')
+    {
+        i++;
+    }
+
     
 }
