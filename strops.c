@@ -224,3 +224,15 @@ char *_strcat(char *s1, const char *s2)
  * @s: input string
  * Return: 1 on sucess and 0 on failure
  */
+int _isdigit(const char *s)
+{
+    int i;
+
+    for (i = 0; s[i] != '\0'; i++)
+    {
+        if (s[i] < 48 || s[i] > 57)
+               return (0);
+    }
+    return (1);
+}
+
