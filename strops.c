@@ -208,7 +208,7 @@ char *_strcat(char *s1, const char *s2)
 
     for (i = 0; s1[i] != '\0'; i++)
     ;
-    for (j = 0; s2 != '\0'; j++)
+    for (j = 0; s2[j] != '\0'; j++)
     {
         s1[i] = s2[j];
         i++;
@@ -269,7 +269,7 @@ int cmpChar(char str1[], const char *del)
 void revstr(char *s)
 {
     int i, x;
-    char temp, *str;
+    char temp;
     
     i = 0; 
 
@@ -277,8 +277,6 @@ void revstr(char *s)
     {
         i++;
     }
-    
-    str = s;
 
     for (x = 0; x < ((i - 1) / 2); x++)
     {
@@ -286,4 +284,11 @@ void revstr(char *s)
         *(s + (i - x -1)) =  *(s + x);
         *(s + x) = temp;
     }
+}
+
+int main(void)
+{
+    char s[] = "name";
+    revstr(s);
+    _puts(s);
 }
