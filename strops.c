@@ -196,3 +196,5 @@ int _strspn(char *s, char *a)
     }
     return (1);
 }
+/**
+ * str
