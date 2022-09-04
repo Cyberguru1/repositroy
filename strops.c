@@ -282,6 +282,8 @@ void revstr(char *s)
 
     for (x = 0; x < ((i - 1) / 2); x++)
     {
-        temp = *(s)
+        temp = *(s + (i - x -1));
+        *(s + (i - x -1)) =  *(s + x);
+        *(s + x) = temp;
     }
 }
