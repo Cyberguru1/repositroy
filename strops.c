@@ -288,7 +288,7 @@ void revstr(char *s)
 
 int main(void)
 {
-    char s[] = "name";
+    char s[] = "hamzaaaasd";
     revstr(s);
     _puts(s);
 }
