@@ -246,6 +246,16 @@ int _isdigit(const char *s)
 int cmpChar(char str1[], const char *del)
 {
     unsigned int i, j, k;
-    
-    for (i = 0)
+
+    for (i = 0; str1[i] != '\0'; i++)
+    {
+        for (j = 0; del[j] != '\0'; j++)
+        {
+            if (str1[i] != del[j])
+                break;
+            k++;
+        }
+    }
+    if (i == k)
+       rer
 }
