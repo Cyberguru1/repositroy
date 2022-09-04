@@ -202,29 +202,25 @@ int _strspn(char *s, char *a)
  * @s2: second string
  * Return: a poniter to a new string
  */
-char *_strcat(char *s1, char *s2)
+char *_strcat(char *s1, const char *s2)
 {
-    int i,j,k;
-    char *s3;
-    k = 0;
+    int i,j;
 
-    for (i = 0; *s1 != NULL; i++, s1++)
+    for (i = 0; s1[i] != '\0'; i++)
     ;
-    for (j = 0; s2 != NULL; j++, s2++)
-    ;
-
-    s3 = malloc(sizeof(char) * (i + j + 1));
-
-    while (k++ < (i + j))
+    for (j = 0; s2 != '\0'; j++)
     {
-        if (k <= i)
-        {
-            s3[k] = s1[k];
-        }
-
-        s3[k] = s2[k];
+        s1[i] = s2[j];
+        i++;
     }
-    s3[k] = '\0';
 
-    return s3;
+    s1[i] = '\0';
+
+    return (s1);
 }
+
+/**
+ * _isdigit - checks if string passed is a number
+ * @s: input string
+ * Return: 1 on sucess and 0 on failure
+ */
