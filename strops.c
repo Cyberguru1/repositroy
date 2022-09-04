@@ -238,4 +238,14 @@ int _isdigit(const char *s)
 
 
 /**
- * cmpChar - 
+ * cmpChar - comapres each char in a string
+ * @str1: array of string
+ * @del: input delimeter to compare(also an array)
+ * Return: 1 on sucess
+ */
+int cmpChar(char str1[], const char *del)
+{
+    unsigned int i, j, k;
+    
+    for (i = 0)
+}
