@@ -83,7 +83,9 @@ int get_error(dshell *datash, int eval);
 /* check syntax */
 int repeated_char(char *input, int i);
 int error_sep_op(char *input, int i, char last);
-
+int first_char(char *input, int *i);
+void print_syntax_error(dshell *datash, char *input, int i, int bool);
+int check_syntax(dshell *datash, char *input);
 
 
 
