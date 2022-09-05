@@ -41,6 +41,8 @@ int _strspn(char *s, char *a);
 char *_strcat(char *s1, const char *s2);
 char *_strchr(char *s, char c);
 char *_strdup(char *s1);
+/* bulilib */
+int _atoi(char *s)
 /* error handling */
 
 
