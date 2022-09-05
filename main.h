@@ -137,8 +137,6 @@ int is_executable(dshell *datash);
 int check_error_cmd(char *dir, dshell *datash);
 int cmd_exec(dshell *datash);
 void get_sigint(int sig);
-
-/* _exit.c */
 int exit_shell(dshell *datash);
 
 /* help.c */
