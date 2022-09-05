@@ -9,7 +9,7 @@
  * @ver_str: counter lines
  * Return: error message
  */
-char *strcat_cd(data_shell *datash, char *msg, char *error, char *ver_str)
+char *strcat_cd(dshell *datash, char *msg, char *error, char *ver_str)
 {
 	char *illegal_flag;
 
@@ -43,7 +43,7 @@ char *strcat_cd(data_shell *datash, char *msg, char *error, char *ver_str)
  * @datash: data relevant (directory)
  * Return: Error message
  */
-char *error_get_cd(data_shell *datash)
+char *error_get_cd(dshell *datash)
 {
 	int length, len_id;
 	char *error, *ver_str, *msg;
@@ -82,7 +82,7 @@ char *error_get_cd(data_shell *datash)
  * @datash: data relevant (counter, arguments)
  * Return: Error message
  */
-char *error_not_found(data_shell *datash)
+char *error_not_found(dshell *datash)
 {
 	int length;
 	char *error;
@@ -115,7 +115,7 @@ char *error_not_found(data_shell *datash)
  *
  * Return: Error message
  */
-char *error_exit_shell(data_shell *datash)
+char *error_exit_shell(dshell *datash)
 {
 	int length;
 	char *error;
@@ -148,7 +148,7 @@ char *error_exit_shell(data_shell *datash)
  * @datash: data relevant (counter, arguments)
  * Return: error message.
  */
-char *error_env(data_shell *datash)
+char *error_env(dshell *datash)
 {
 	int length;
 	char *error;
@@ -184,7 +184,7 @@ char *error_env(data_shell *datash)
  *
  * Return: The error string.
  */
-char *error_path_126(data_shell *datash)
+char *error_path_126(dshell *datash)
 {
 	int length;
 	char *ver_str;
@@ -217,7 +217,7 @@ char *error_path_126(data_shell *datash)
  * @eval: error value
  * Return: error
  */
-int get_error(data_shell *datash, int eval)
+int get_error(dshell *datash, int eval)
 {
 	char *error;
 
