@@ -73,5 +73,23 @@ char *_itoa(int n)
     buffer = malloc(sizeof(char) * (length + 1));
     if (buffer == NULL)
         return (NULL);
+    *(buffer + length) = '\0';
+
+    if (n < 0)
+    {
+        x = n * -1 ;
+        buffer[0] = '-';
+    }
+    else
+    x = n;
+
+    length--;
+    do{
+        *(buffer + length) = (x % 10) + '0';
+        x = x/10;
+        length--;
+    }while (x > 0);
+
+    return (buffer);
 
 }
