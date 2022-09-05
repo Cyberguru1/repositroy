@@ -250,3 +250,4 @@ int get_error(dshell *datash, int eval)
 	datash->status = eval;
 	return (eval);
 }
+
