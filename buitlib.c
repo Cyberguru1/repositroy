@@ -57,7 +57,7 @@ int _atoi(char *s)
         xi = xi + ((*(s + i) - 48) * m);
         m /= 10;
     }
-    retun (xi * pn);
+    return (xi * pn);
 }
 /**
  * _itoa - converts a numbers to str
