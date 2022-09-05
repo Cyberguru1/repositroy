@@ -32,6 +32,46 @@ typedef struct data
 }dshell;
 
 
+/**
+ * struct sep_list_s - single linked list
+ * @separator: ; | &
+ * @next: next node
+ * Description: single linked list to store separators
+ */
+typedef struct sep_list_s
+{
+	char separator;
+	struct sep_list_s *next;
+} sep_list;
+
+/**
+ * struct line_list_s - single linked list
+ * @line: command line
+ * @next: next node
+ * Description: single linked list to store command lines
+ */
+typedef struct line_list_s
+{
+	char *line;
+	struct line_list_s *next;
+} line_list;
+
+/**
+ * struct r_var_list - single linked list
+ * @len_var: length of the variable
+ * @val: value of the variable
+ * @len_val: length of the value
+ * @next: next node
+ * Description: single linked list to store variables
+ */
+typedef struct r_var_list
+{
+	int len_var;
+	char *val;
+	int len_val;
+	struct r_var_list *next;
+} r_var;
+
 /* getlin */
 ssize_t get_line(char **buff, size_t *buffsize, FILE *fp);
 
