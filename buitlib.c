@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * geetlen - returns the length of a number
  * @n: input number of type int
@@ -63,7 +64,14 @@ int _atoi(char *s)
  * @s: char to convert
  * Return: int
  */
-char *_atoi(int n)
+char *_itoa(int n)
 {
+    unsigned int x;
+    int length = geetlen(n);
+    char *buffer;
+
+    buffer = malloc(sizeof(char) * (length + 1));
+    if (buffer == NULL)
+        return (NULL);
 
 }
