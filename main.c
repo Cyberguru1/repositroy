@@ -3,6 +3,7 @@
 int main(void){
     size_t var;
     char *buff = NULL;
+    ssize_t out;
     char **token;
 
     
@@ -15,11 +16,11 @@ int main(void){
     {
         printf("%s\n", token[i]);
     } */
-
+    printf("%lu", out);
     if (execve(token[0], token, NULL) == -1)
     {
         perror("Error:");
-        return (NULL);
+        return (0);
         
     }
     return (0);
