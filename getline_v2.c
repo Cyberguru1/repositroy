@@ -39,7 +39,7 @@ ssize_t get_line(char **buff, size_t *buffsize, FILE *fp){
                 return -1;
             *buff = nbuff;
             *buffsize = nbuffsize;
-            eptr - nbuff + nbuffsize;
+            eptr = nbuff + nbuffsize;
             ptr = nbuff + d;
     
         }

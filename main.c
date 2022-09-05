@@ -1,9 +1,8 @@
 #include "main.h"
 
-void main(void){
+int main(void){
     size_t var;
     char *buff = NULL;
-    ssize_t out;
     char **token;
 
     
@@ -23,6 +22,5 @@ void main(void){
         return (NULL);
         
     }
-    else if ();
-
+    return (0);
 }
