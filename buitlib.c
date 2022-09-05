@@ -59,6 +59,7 @@ int _atoi(char *s)
     }
     return (xi * pn);
 }
+
 /**
  * _itoa - converts a numbers to str
  * @s: char to convert
