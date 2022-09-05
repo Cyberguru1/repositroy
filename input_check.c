@@ -42,5 +42,16 @@ int error_sep_op(char *input, int i, char last)
              if (count == 0 || count > 1) return (i);
          }
     }
-    
+    if (*input == '&')
+    {
+        if (last == ';' || last == '|') return (i);
+
+        if (last == '&')
+        {
+            count = repeated_char(input, 0);
+            if (count == 0 || count > 1) return (i);
+        }
+    }
+    return (error_sep_op(input + 1, i + 1, *input));
+
 }
