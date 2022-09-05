@@ -11,3 +11,12 @@ int repeated_char(char *input, int i)
        return (repeated_char(input - 1, i + 1));
     return (i);
 }
+
+/**
+ * error_sep_op - finds inputed syntax errrors
+ * @input: input string
+ * @i: index
+ * @last: last char read
+ * Return: index of char
+ */
+int error
