@@ -76,6 +76,23 @@ void _puts(char *str)
 }
 
 /**
+ * _strcpy - copies one string to another
+ * @dest: destination of the copied string
+ * @src: source of string
+ * Return: an addres tor dest
+ */
+char *_strcpy(char *dest, char *src)
+{
+    size_t a;
+    for (a = 0; src[a] != '\0'; a++)
+    {
+        dest[a] = src[a];
+    }
+    dest[a] = '\0';
+
+    return (dest);
+}
+/**
  * _strcmp - compares two string
  * check 'man strcmp' for more
  * @first_str: first string to compare
