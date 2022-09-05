@@ -50,6 +50,7 @@ void *_calloc(unsigned int size);
 /* strops */
 int _putchar(char c);
 void _puts(char *str);
+char *_strcpy(char *dest, char *src);
 char *_strncpy(char *dest, char *src, int n);
 int _strlen(char *s);
 int _strcmp(char *first_str, char *second_str);
