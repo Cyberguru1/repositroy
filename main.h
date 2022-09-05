@@ -64,10 +64,21 @@ char *_strchr(char *s, char c);
 char *_strdup(char *s1);
 
 /* bulilib */
+int geetlen(int n);
 int _atoi(char *s);
 char *_itoa(int n);
 
 /* error handling */
+char *strcat_cd(dshell *, char *, char *, char *);
+char *error_get_cd(dshell *datash);
+char *error_not_found(dshell *datash);
+char *error_exit_shell(dshell *datash);
+char *error_get_alias(char **args);
+char *error_env(dshell *datash);
+char *error_syntax(char **args);
+char *error_permission(char **args);
+char *error_path_126(dshell *datash);
+int get_error(data_shell *datash, int eval);
 
 
 
