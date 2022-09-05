@@ -44,7 +44,7 @@ char *_strdup(char *s1);
 
 /* bulilib */
 int _atoi(char *s);
-char *_atoi(int n);
+char *_itoa(int n);
 
 /* error handling */
 
