@@ -37,6 +37,10 @@ char *_strndup(char *s1, char *s2);
 void revstr(char *s);
 int cmpChar(char str1[], const char *del);
 int _isdigit(const char *s);
+int _strspn(char *s, char *a);
+char *_strcat(char *s1, const char *s2);
+char *_strchr(char *s, char c);
+char *_strdup(char *s1);
 /* error handling */
 
 
