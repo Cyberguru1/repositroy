@@ -109,7 +109,17 @@ int _strcmp(char *first_str, char *second_str)
  */
 int _strncmp(char *s1, char *s2, size_t n)
 {
-
+    size_t i;
+    if (s1 == NULL)
+       return (-1);
+    for (i = 0; i < n && s2[i]; i++)
+    {
+        if (s1[i] != s2[i])
+        {
+            return (1);
+        }
+    }
+    return (0);
 }
 
 /**
