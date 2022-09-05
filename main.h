@@ -31,12 +31,12 @@ int _putchar(char c);
 void _puts(char *str);
 char *_strncpy(char *dest, char *src, int n);
 int _strlen(char *s);
-int _atoi(char *s);
 int _strcmp(char *first_str, char *second_str);
 int _strncmp(char *s1, char *s2, size_t n);
 char *_strndup(char *s1, char *s2);
-char _itoa(int *n);
-
+void revstr(char *s);
+int cmpChar(char str1[], const char *del);
+int _isdigit(const char *s);
 /* error handling */
 
 
