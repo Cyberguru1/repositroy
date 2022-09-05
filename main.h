@@ -83,7 +83,7 @@ char *error_permission(char **args);
 char *error_path_126(dshell *datash);
 int get_error(dshell *datash, int eval);
 
-/* check syntax */
+/* input_check */
 int repeated_char(char *input, int i);
 int error_sep_op(char *input, int i, char last);
 int first_char(char *input, int *i);
