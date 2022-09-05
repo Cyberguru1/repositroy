@@ -93,11 +93,26 @@ int check_syntax(dshell *datash, char *input);
 /* cmd_exec.c */
 int is_cdir(char *path, int *i);
 char *_which(char *cmd, char **_environ);
-int is_executable(data_shell *datash);
-int check_error_cmd(char *dir, data_shell *datash);
-int cmd_exec(data_shell *datash);
+int is_executable(dshell *datash);
+int check_error_cmd(char *dir, dshell *datash);
+int cmd_exec(dshell *datash);
+void get_sigint(int sig);
 
+/* _exit.c */
+int exit_shell(dshell *datash);
 
+/* help.c */
+void aux_help_env(void);
+void aux_help_setenv(void);
+void aux_help_unsetenv(void);
+void aux_help_general(void);
+void aux_help_exit(void);
+void aux_help(void);
+void aux_help_alias(void);
+void aux_help_cd(void);
+
+/* get_help.c */
+int get_help(dshell *datash);
 
 
 
