@@ -56,18 +56,6 @@ int _strlen(char *s)
 
     return i;
 }
-
-/**
- * _atoi - converts a string to int
- * @s: char to convert
- * Return: int
- */
-
-int _atoi(char *s)
-{
-
-}
-
 /**
  * _puts - print a string
  * @str: pointer to an array of char ending with a '\0'
@@ -284,17 +272,4 @@ void revstr(char *s)
         *(s + (i - x -1)) =  *(s + x);
         *(s + x) = temp;
     }
-}
-/**
- * main - testing function for each function call
- * void: input is void
- * Return: returns 0 on sucess
- */
-
-int main(void)
-{
-    char s[] = "name";
-    
-    revstr(s);
-    _puts(s);
 }
