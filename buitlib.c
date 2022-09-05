@@ -15,8 +15,14 @@ int geetlen(int n)
     }
     else
     {
-        
+        x = n;
     }
+    while (n > 9)
+    {
+        length++;
+        x = x / 10;
+    }
+    return (length);
 }
 /**
  * _atoi - converts a string to int
