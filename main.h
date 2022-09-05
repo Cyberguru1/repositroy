@@ -10,6 +10,26 @@
 
 #define BUFFSIZE 1024
 
+/**
+ * struct data - sturct data contains some runtime  data
+ * @av: argument vector
+ * @input: command line inputed by user
+ * @args: tokens of the comand line
+ * @statu: last status of the shell
+ * @counter: lines counter
+ * @_environ: enviromental variable
+ * @pid: process id of the shell
+ */
+typedef struct data
+{
+    char **av;
+    char *input;
+    char **args;
+    int status;
+    int counter;
+    char **__environ;
+    char *pid;
+}dshell;
 
 
 /* getlin */
