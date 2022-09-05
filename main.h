@@ -150,10 +150,25 @@ void aux_help_exit(void);
 void aux_help(void);
 void aux_help_alias(void);
 void aux_help_cd(void);
-
-/* get_help.c */
 int get_help(dshell *datash);
 
+/**
+ * struct builtin_s - Builtin struct for command args.
+ * @name: The name of the command builtin i.e cd, exit, env
+ * @f: data type pointer function.
+ */
+typedef struct builtin_s
+{
+	char *name;
+	int (*f)(dshell *datash);
+} builtin_t;
 
+/* lists.c */
+sep_list *add_sep_node_end(sep_list **head, char sep);
+void free_sep_list(sep_list **head);
+line_list *add_line_node_end(line_list **head, char *line);
+void free_line_list(line_list **head);
+r_var *add_rvar_node(r_var **head, int lvar, char *var, int lval);
+void free_rvar_list(r_var **head);
 
 #endif
