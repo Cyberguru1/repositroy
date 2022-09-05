@@ -8,7 +8,15 @@ int geetlen(int n)
     unsigned int x;
     int length = 1;
     
-    if n
+    if (n < 0)
+    {
+        length++;
+        x = n * -1;
+    }
+    else
+    {
+        
+    }
 }
 /**
  * _atoi - converts a string to int
