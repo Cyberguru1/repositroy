@@ -78,9 +78,10 @@ char *error_env(dshell *datash);
 char *error_syntax(char **args);
 char *error_permission(char **args);
 char *error_path_126(dshell *datash);
-int get_error(data_shell *datash, int eval);
+int get_error(dshell *datash, int eval);
 
-
+/* check syntax */
+int repeated_char(char *input, int i);
 
 
 
