@@ -170,6 +170,13 @@ void free_line_list(line_list **head);
 r_var *add_rvar_node(r_var **head, int lvar, char *var, int lval);
 void free_rvar_list(r_var **head);
 
+/* env.c */
+char *_getenv(const char *name, char **_environ);
+int _env(dshell *datash);
+char *copy_info(char *name, char *value);
+void set_env(char *name, char *value, dshell *datash);
+int _setenv(dshell *datash);
+int _unsetenv(dshell *datash);
 
 
 #endif
