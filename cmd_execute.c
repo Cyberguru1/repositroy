@@ -209,9 +209,9 @@ int cmd_exec(dshell *datash)
  * @datash: data relevant (args)
  * Return: 1 on success.
  */
-int exec_line(data_shell *datash)
+int exec_line(dshell *datash)
 {
-	int (*builtin)(data_shell *datash);
+	int (*builtin)(dshell *datash);
 
 	if (datash->args[0] == NULL)
 		return (1);
@@ -241,7 +241,7 @@ void get_sigint(int sig)
  * @datash: data relevant (status and args)
  * Return: 0 on success.
  */
-int exit_shell(data_shell *datash)
+int exit_shell(dshell *datash)
 {
 	unsigned int ustatus;
 	int is_digit;
