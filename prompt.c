@@ -49,7 +49,7 @@ void shell_loop(dshell *datash)
 	while (loop == 1)
 	{
 		write(STDIN_FILENO, "$ ", 2);
-		input = readline(&i_eof);
+		input = read_line(&i_eof);
 		if (i_eof != -1)
 		{
 			input = without_comment(input);
