@@ -56,7 +56,7 @@ void _puts(char *str)
 char *_strcpy(char *dest, char *src)
 {
 	size_t a;
-	
+
 	for (a = 0; src[a] != '\0'; a++)
 	{
 		dest[a] = src[a];
@@ -79,7 +79,6 @@ int _strcmp(char *first_str, char *second_str)
 
 	for (i = 0; first_str[i] == second_str[i] && first_str[i]; i++)
 	;
-
 	if (first_str[i] > second_str[i])
 	return (1);
 	
