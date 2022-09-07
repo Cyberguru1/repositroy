@@ -80,10 +80,10 @@ int _strcmp(char *first_str, char *second_str)
 	;
 
 	if (first_str[i] > second_str[i])
-	   return (1);
+	return (1);
 	
 	if (first_str[i] < second_str[i])
-		return (-1);
+	return (-1);
 
 	return (0);
 }

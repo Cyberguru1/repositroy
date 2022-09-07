@@ -37,7 +37,7 @@ int _strncmp(char *s1, char *s2, size_t n)
 	 i = _strlen(s1);
 
 	 if((s2 = malloc(sizeof(char) * (i + 1))) == NULL)
-		 return (NULL);
+     return (NULL);
 
 	 for (x = 0; x < i; x++)
 	 {
@@ -61,12 +61,12 @@ int cmpChar(char str1[], const char *del)
 		for (j = 0; del[j] != '\0'; j++)
 		{
 			if (str1[i] != del[j])
-				break;
+			break;
 			k++;
 		}
 	}
 	if (i == k)
-	   return (1);
+	return (1);
 	return (0);
 }
 
