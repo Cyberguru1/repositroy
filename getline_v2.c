@@ -6,7 +6,6 @@
  * @fp: file descrptor
  * Return: size of bytes on sucess or -1 on failure
  */
-
 ssize_t get_line(char **buff, size_t *buffsize, FILE *fp)
 {   char *ptr, *eptr, *nbuff;
 	ssize_t nbuffsize, d;
