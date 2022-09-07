@@ -24,7 +24,7 @@ extern char **environ;
  * @av: argument vector
  * @input: command line inputed by user
  * @args: tokens of the comand line
- * @statu: last status of the shell
+ * @status: last status of the shell
  * @counter: lines counter
  * @_environ: enviromental variable
  * @pid: process id of the shell
