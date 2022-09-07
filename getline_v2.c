@@ -30,8 +30,7 @@ ssize_t get_line(char **buff, size_t *buffsize, FILE *fp)
 		}
 		*ptr++ = c;
 		if (c == '\n')
-		{
-			*ptr = '\0';
+		{	*ptr = '\0';
 			return (ptr - *buff);
 		}
 		if (ptr + 2 >= eptr)
