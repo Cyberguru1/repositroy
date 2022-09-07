@@ -7,8 +7,17 @@
 #include <unistd.h>
 #include <errno.h>
 #include <string.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <limits.h>
+#include <sys/wait.h>
+#include <sys/stat.h>
 
 #define BUFFSIZE 1024
+#define TOK_BUFSIZE 128
+#define TOK_DELIM " \t\r\n\a"
+
+extern char **environ;
 
 /**
  * struct data - sturct data contains some runtime  data
