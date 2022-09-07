@@ -9,6 +9,7 @@ int geetlen(int n)
 	unsigned int x;
 
 	int length = 1;
+	
 	if (n < 0)
 	{
 		length++;
