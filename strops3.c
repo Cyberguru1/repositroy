@@ -11,9 +11,11 @@
 int _strncmp(char *s1, char *s2, size_t n)
 {
 	size_t i;
+
 	if (s1 == NULL)
-	   return (-1);
-	for (i = 0; i < n && s2[i]; i++)
+	return (-1);
+	
+    for (i = 0; i < n && s2[i]; i++)
 	{
 		if (s1[i] != s2[i])
 		{
@@ -28,9 +30,8 @@ int _strncmp(char *s1, char *s2, size_t n)
  * @s1: string1
  * Return: returns string duplicate
  */
- char *_strdup(char *s1)
- {
-	 int i;
+char *_strdup(char *s1)
+{	 int i;
 	 int x;
 	 char *s2;
 
