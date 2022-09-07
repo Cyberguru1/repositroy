@@ -166,7 +166,7 @@ int (*get_builtin(char *cmd))(dshell *)
 	for (i = 0; builtin[i].name; i++)
 	{
 		if (_strcmp(builtin[i].name, cmd) == 0)
-			break;
+		break;
 	}
 
 	return (builtin[i].f);
