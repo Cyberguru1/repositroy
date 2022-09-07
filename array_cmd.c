@@ -13,13 +13,14 @@ char **parse_cmd(char *input)
 
 	i = 0;
 
-	if (input == NULL){
-	   return NULL;
-	}
+	if (input == NULL)
+	return NULL;
+
 	tokens = malloc(sizeof(char) * BUFFSIZE);
-	if (tokens == NULL)
-	{  perror("hsh");
-	   return NULL;
+	
+	if (tokens == NULL){
+		perror("hsh");
+		return (NULL);
 	}
 
 	token = _strtok(input, delim);
@@ -30,6 +31,5 @@ char **parse_cmd(char *input)
 		token = _strtok(NULL, delim);
 		i++;
 	}
-
-	return tokens;
+	return (tokens);
 }
