@@ -113,7 +113,7 @@ void *_calloc(unsigned int size)
 	if ((mem = malloc(size)) == NULL)
 	{
 		perror("hsh");
-		return(NULL);
+		return (NULL);
 	}
 
 	for (i = 0; i < size; i++)
