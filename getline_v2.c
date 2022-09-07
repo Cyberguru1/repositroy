@@ -8,8 +8,7 @@
  */
 
 ssize_t get_line(char **buff, size_t *buffsize, FILE *fp)
-{
-	char *ptr, *eptr, *nbuff;
+{   char *ptr, *eptr, *nbuff;
 	ssize_t nbuffsize, d;
 	int c;
 	
@@ -37,8 +36,7 @@ ssize_t get_line(char **buff, size_t *buffsize, FILE *fp)
 			return (ptr - *buff);
 		}
 		if (ptr + 2 >= eptr)
-		{
-			nbuffsize = *buffsize * 2;
+		{   nbuffsize = *buffsize * 2;
 			d = ptr - *buff;
 			nbuff = realloc(*buff, nbuffsize);
 			if (nbuff == NULL)
