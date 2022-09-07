@@ -36,7 +36,7 @@ typedef struct data
     char **args;
     int status;
     int counter;
-    char **__environ;
+    char **_environ;
     char *pid;
 }dshell;
 
