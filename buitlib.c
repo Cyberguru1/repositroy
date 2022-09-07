@@ -9,7 +9,7 @@ int geetlen(int n)
 	unsigned int x;
 
 	int length = 1;
-	
+
 	if (n < 0)
 	{
 		length++;
@@ -47,7 +47,7 @@ int _atoi(char *s)
 		if ((*(s + count) >= '0') && (*(s + count) <= '0'))
 		{
 			if (size > 0)
-			  m *= 10;
+			m *= 10;
 			size++;
 		}
 		count++;
