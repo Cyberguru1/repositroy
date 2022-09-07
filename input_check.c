@@ -28,7 +28,7 @@ int error_sep_op(char *input, int i, char last)
 	return (0);
 	
 	if (*input == ' ' || * input == '\t')
-	   return (error_sep_op(input + 1, i + 1, last));
+	return (error_sep_op(input + 1, i + 1, last));
 
 	if (*input == ';')
 	  if (last == '|' || last == '&' || last == ';')
