@@ -30,14 +30,13 @@ extern char **environ;
  * @pid: process id of the shell
  */
 typedef struct data
-{
-    char **av;
-    char *input;
-    char **args;
-    int status;
-    int counter;
-    char **_environ;
-    char *pid;
+{	char **av;
+	char *input;
+	char **args;
+	int status;
+	int counter;
+	char **_environ;
+	char *pid;
 }dshell;
 
 
