@@ -32,7 +32,6 @@ int _strncmp(char *s1, char *s2, size_t n)
  */
 char *_strdup(char *s1)
 {	int i;
-	int x;
 	char *s2;
 
 	i = _strlen(s1);
