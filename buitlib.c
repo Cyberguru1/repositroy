@@ -78,18 +78,20 @@ char *_itoa(int n)
 
 	if (n < 0)
 	{
-		x = n * -1 ;
+		x = n * -1;
 		buffer[0] = '-';
 	}
 	else
 	x = n;
 
 	length--;
-	do{
+	do
+	{
 		*(buffer + length) = (x % 10) + '0';
 		x = x / 10;
 		length--;
-	} while (x > 0);
+	}
+	while (x > 0);
 
 	return (buffer);
 
