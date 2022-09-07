@@ -62,7 +62,7 @@ int _atoi(char *s)
 
 /**
  * _itoa - converts a numbers to str
- * @s: char to convert
+ * @n: char to convert
  * Return: int
  */
 char *_itoa(int n)
