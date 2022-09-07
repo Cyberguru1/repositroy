@@ -121,7 +121,7 @@ void cd_previous(dshell *datash)
 
 	free(cp_pwd);
 	if (p_oldpwd)
-		free(cp_oldpwd);
+	free(cp_oldpwd);
 
 	datash->status = 0;
 
@@ -207,4 +207,3 @@ int cd_shell(dshell *datash)
 
 	return (1);
 }
-
