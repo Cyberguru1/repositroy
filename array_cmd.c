@@ -14,7 +14,7 @@ char **parse_cmd(char *input)
 	i = 0;
 
 	if (input == NULL)
-	return NULL;
+	return (NULL);
 
 	tokens = malloc(sizeof(char) * BUFFSIZE);
 	
