@@ -38,8 +38,8 @@ void _puts(char *str)
 {
 	int i;
 	i = 0;
-
-	while(*str)
+	
+	while (*str)
 	{
 		_putchar(str[i]);
 		i++;
@@ -56,6 +56,7 @@ void _puts(char *str)
 char *_strcpy(char *dest, char *src)
 {
 	size_t a;
+	
 	for (a = 0; src[a] != '\0'; a++)
 	{
 		dest[a] = src[a];
