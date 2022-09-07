@@ -85,3 +85,29 @@ char *_strchr(char *s, char c)
 	   return (s + i);
 	return ('\0');
 }
+/**
+ * _strncpy - copy a string
+ * @dest: char array to copy to
+ * @src: char array to copy from
+ * @n: size of bytes to copy
+ * Return: dest of char
+ */
+
+char *_strncpy(char *dest, char *src, int n)
+{
+	int i;
+
+	for (i = 0; i < n && *(src + i); i++)
+	{
+		*(dest + i) = *(src + i);
+	}
+
+	/* fill the remainning space if exitsting with '\0' */
+	while (i < n)
+	{
+		*(dest + i) = '\0';
+		i++;
+	}
+	return dest;
+
+}

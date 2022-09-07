@@ -10,34 +10,6 @@ int _putchar(char c)
 {
 	return(write(1, &c, 1));
 }
-
-/**
- * _strncpy - copy a string
- * @dest: char array to copy to
- * @src: char array to copy from
- * @n: size of bytes to copy
- * Return: dest of char
- */
-
-char *_strncpy(char *dest, char *src, int n)
-{
-	int i;
-
-	for (i = 0; i < n && *(src + i); i++)
-	{
-		*(dest + i) = *(src + i);
-	}
-
-	/* fill the remainning space if exitsting with '\0' */
-	while (i < n)
-	{
-		*(dest + i) = '\0';
-		i++;
-	}
-	return dest;
-
-}
-
 /**
  * _strlen - length of string
  * @s: char
@@ -114,52 +86,4 @@ int _strcmp(char *first_str, char *second_str)
 		return (-1);
 
 	return (0);
-}
-
-/**
- * _strncmp - compares N characters of string
- * check 'man strncmp' for more detail
- * @s1: first string
- * @s2: second string
- * @n: size of bytes for comparison
- * Return: returns 1 on success and 0 on failure
- */
-int _strncmp(char *s1, char *s2, size_t n)
-{
-	size_t i;
-	if (s1 == NULL)
-	   return (-1);
-	for (i = 0; i < n && s2[i]; i++)
-	{
-		if (s1[i] != s2[i])
-		{
-			return (1);
-		}
-	}
-	return (0);
-}
-
-/**
- * _strdup - Duplicate a string
- * @s1: string1
- * Return: returns string duplicate
- */
- char *_strdup(char *s1)
- {
-	 int i;
-	 int x;
-	 char *s2;
-
-	 i = _strlen(s1);
-
-	 if((s2 = malloc(sizeof(char) * (i + 1))) == NULL)
-		 return NULL;
-
-	 for (x = 0; x < i; x++)
-	 {
-		 s1[x] = s2[x];
-	 }
-	 s2[x] = '\0';
-
-	return s2;
 }
