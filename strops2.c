@@ -8,8 +8,8 @@
 int _strspn(char *s, char *a)
 {
 	int i, j, bool;
-	
-	for (i = 0; *(s + i) != '\0'; i++)
+    
+    for (i = 0; *(s + i) != '\0'; i++)
 	{
 		bool = 1;
 		for (j = 0; *(a + j) != '\0'; j++)
@@ -21,9 +21,9 @@ int _strspn(char *s, char *a)
 			}
 		}
 		if (bool == 1)
-		 break;
+		break;
 	}
-	return (1);
+    return (1);
 }
 /**
  * _strcat - combines two strings
