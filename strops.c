@@ -1,15 +1,4 @@
 #include "main.h"
-
-/**
- * _putchar - writes to stdout a char
- * @c: character to write
- * Return: 0 on failure and 1 on success
- */
-
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
 /**
  * _strlen - length of string
  * @s: char
@@ -20,33 +9,11 @@ int _strlen(char *s)
 {
 	int i;
 
-	while (*s)
-	{
-		s++;
-		i++;
-	}
+	for (i = 0; s[i] != '\0'; i++)
+	;
 
 	return (i);
 }
-/**
- * _puts - print a string
- * @str: pointer to an array of char ending with a '\0'
- * Return: void
- * iterate through the list and use _putchar to print char
- */
-void _puts(char *str)
-{
-	int i;
-
-	i = 0;
-	while (*str)
-	{
-		_putchar(str[i]);
-		i++;
-	}
-
-}
-
 /**
  * _strcpy - copies one string to another
  * @dest: destination of the copied string

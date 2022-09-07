@@ -40,11 +40,7 @@ char *_strdup(char *s1)
 	if (s2 == NULL)
 	return (NULL);
 
-	for (x = 0; x < i; x++)
-	{
-		s1[x] = s2[x];
-	}
-	s2[x] = '\0';
+	_memcpy(s2, s1, i + 1);
 	return (s2);
 }
 /**
