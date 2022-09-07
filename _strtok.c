@@ -62,6 +62,5 @@ char *_strtok(char *str, const char *delim)
 		if (*nt == '\0')
 			nt = NULL;
 	}
-	return (ts);
-	
+	return (ts);	
 }
