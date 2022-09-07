@@ -188,5 +188,11 @@ void set_env(char *name, char *value, dshell *datash);
 int _setenv(dshell *datash);
 int _unsetenv(dshell *datash);
 
+/* cd.c */
+void cd_dot(dshell *datash);
+void cd_to(dshell *datash);
+void cd_previous(dshell *datash);
+void cd_to_home(dshell *datash);
+int cd_shell(dshell *datash);
 
 #endif
