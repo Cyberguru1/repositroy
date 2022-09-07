@@ -12,8 +12,7 @@ ssize_t get_line(char **buff, size_t *buffsize, FILE *fp)
 	int c;
 	
 	if (*buff == NULL || *buffsize == 0)
-	{
-		*buffsize = BUFFSIZE;
+	{	*buffsize = BUFFSIZE;
 		*buff = malloc(*buffsize);
 		if (*buff == NULL)
 		return (-1);
