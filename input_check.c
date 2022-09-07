@@ -98,16 +98,16 @@ void print_syntax_error(dshell *datash, char *input, int i, int bool)
 	if (input[i] == ';')
 	{
 		if (bool == 0)
-			msg = (input[i + 1] == ';' ? ";;" : ";");
+		msg = (input[i + 1] == ';' ? ";;" : ";");
 		else
-			msg = (input[i - 1] == ';' ? ";;" : ";");
+		msg = (input[i - 1] == ';' ? ";;" : ";");
 	}
 
 	if (input[i] == '|')
-		msg = (input[i + 1] == '|' ? "||" : "|");
+	msg = (input[i + 1] == '|' ? "||" : "|");
 
 	if (input[i] == '&')
-		msg = (input[i + 1] == '&' ? "&&" : "&");
+	msg = (input[i + 1] == '&' ? "&&" : "&");
 
 	msg2 = ": Syntax error: \"";
 	msg3 = "\" unexpected\n";
