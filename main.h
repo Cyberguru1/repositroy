@@ -80,6 +80,7 @@ typedef struct r_var_list
 
 /* getlin */
 ssize_t get_line(char **buff, size_t *buffsize, FILE *fp);
+char *read_line(int *i_eof);
 
 /* strtoken */
 unsigned int check_delimeter(char c, const char *str);
