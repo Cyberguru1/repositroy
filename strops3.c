@@ -14,7 +14,7 @@ int _strncmp(char *s1, char *s2, size_t n)
 
 	if (s1 == NULL)
 	return (-1);
-	
+
 	for (i = 0; i < n && s2[i]; i++)
 	{
 		if (s1[i] != s2[i])
@@ -31,22 +31,21 @@ int _strncmp(char *s1, char *s2, size_t n)
  * Return: returns string duplicate
  */
 char *_strdup(char *s1)
-{	 int i;
-	 int x;
-	 char *s2;
-	 
-	 i = _strlen(s1);
-	 s2 = malloc(sizeof(char) * (i + 1));
-	 
-	 if (s2 == NULL)
-	 return (NULL);
+{	int i;
+	int x;
+	char *s2;
 
-	 for (x = 0; x < i; x++)
-	 {
-		 s1[x] = s2[x];
-	 }
-	 s2[x] = '\0';
-	 return (s2);
+	i = _strlen(s1);
+	s2 = malloc(sizeof(char) * (i + 1));
+	if (s2 == NULL)
+	return (NULL);
+
+	for (x = 0; x < i; x++)
+	{
+		s1[x] = s2[x];
+	}
+	s2[x] = '\0';
+	return (s2);
 }
 /**
  * cmpChar - comapres each char in a string
@@ -74,13 +73,13 @@ int cmpChar(char str1[], const char *del)
 
 /**
  * revstr - reverse an inputed string
- * @str: input string
+ * @s: input string
  * Return: void
  */
 void revstr(char *s)
 {	int i, x;
 	char temp;
-	
+
 	i = 0;
 
 	while (s[i] != '\0')
@@ -95,3 +94,4 @@ void revstr(char *s)
 		*(s + x) = temp;
 	}
 }
+
