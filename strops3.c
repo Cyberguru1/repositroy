@@ -64,7 +64,7 @@ int cmp_Chars(char str1[], const char *del)
 	}
 	if (i == k)
 	return (1);
-	
+
 	return (0);
 }
 
