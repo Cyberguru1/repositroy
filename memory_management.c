@@ -46,14 +46,14 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
  * _memcpy - copy ones memory to another
  * @src: source to copy from
  * @dest: destination to copy to
- * n: size in bytes of dest
+ * @n: size in bytes of dest
  * Return: void pointer
  */
 
 void *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i;
-	
+
 	for (i = 0; i < n; i++)
 	{
 		dest[i] = src[i];
@@ -110,7 +110,8 @@ void *_calloc(unsigned int size)
 
 	if (size == 0)
 	return (NULL);
-	if ((mem = malloc(size)) == NULL)
+	mem = malloc(size);
+	if (mem == NULL)
 	{
 		perror("hsh");
 		return (NULL);
