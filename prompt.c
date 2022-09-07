@@ -56,7 +56,7 @@ void shell_loop(dshell *datash)
 			if (input == NULL)
 				continue;
 
-			if (check_syntax_error(datash, input) == 1)
+			if (check_syntax(datash, input) == 1)
 			{
 				datash->status = 2;
 				free(input);
