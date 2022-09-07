@@ -87,9 +87,9 @@ char *_itoa(int n)
 	length--;
 	do{
 		*(buffer + length) = (x % 10) + '0';
-		x = x/10;
+		x = x / 10;
 		length--;
-	}while (x > 0);
+	} while (x > 0);
 
 	return (buffer);
 
