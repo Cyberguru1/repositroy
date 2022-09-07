@@ -28,8 +28,7 @@ ssize_t get_line(char **buff, size_t *buffsize, FILE *fp)
 		{
 			if (feof(fp))
 			return ptr == *buff ? -1 : ptr - *buff;
-
-			else 
+			else
 			return (-1);
 		}
 		*ptr++ = c;
@@ -42,8 +41,9 @@ ssize_t get_line(char **buff, size_t *buffsize, FILE *fp)
 		{
 			nbuffsize = *buffsize * 2;
 			d = ptr - *buff;
-			if ((nbuff = realloc(*buff, nbuffsize)) == NULL)
-				return (-1);
+			nbuff = realloc(*buff, nbuffsize);
+			if (nbuff == NULL)
+			return (-1);
 			*buff = nbuff;
 			*buffsize = nbuffsize;
 			eptr = nbuff + nbuffsize;
