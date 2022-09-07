@@ -88,11 +88,10 @@ char *_strtok(char *str, const char *delim);
 char **parse_cmd(char *input);
 
 /* memory management */
+void _memcpy(void *newptr, const void *ptr, unsigned int size);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
-void *_memcpy(char *dest, char *src, unsigned int n);
-void free_all(char **ptr, char *line);
-char *_memset(char *str, char fill, unsigned int num);
-void *_calloc(unsigned int size);
+char **_reallocdp(char **ptr, unsigned int old_size, unsigned int new_size);
+
 
 /* strops */
 int _putchar(char c);
