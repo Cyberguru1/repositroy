@@ -135,13 +135,13 @@ void print_syntax_error(dshell *datash, char *input, int i, int bool)
 }
 
 /**
- * check_syntax_error - intermediate function to
+ * check_syntax - intermediate function to
  * find and print a syntax error
  * @datash: data structure
  * @input: input string
  * Return: 1 if there is an error. 0 in other case
  */
-int check_syntax_error(dshell *datash, char *input)
+int check_syntax(dshell *datash, char *input)
 {
 	int begin = 0;
 	int f_char = 0;
