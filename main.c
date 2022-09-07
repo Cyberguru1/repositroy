@@ -1,13 +1,4 @@
 #include "main.h"
-
-<<<<<<< HEAD
-int main(void){
-  
-    out = get_line(&buff, &var, stdin);
-    token = parse_cmd(buff); 
- 
-}
-=======
 /**
  * free_data - frees data structure
  *
@@ -79,4 +70,3 @@ int main(int ac, char **av)
 		return (255);
 	return (datash.status);
 }
->>>>>>> 101ece7283299ef9fb8a9dd87183cfd62a272509
