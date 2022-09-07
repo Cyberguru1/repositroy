@@ -118,6 +118,13 @@ int geetlen(int n);
 int _atoi(char *s);
 char *_itoa(int n);
 
+/* aray_cmd */
+char *swap_char(char *input, int bool);
+void add_nodes(sep_list **head_s, line_list **head_l, char *input);
+void go_next(sep_list **list_s, line_list **list_l, dshell *datash);
+int split_commands(dshell *datash, char *input);
+char **split_line(char *input);
+
 /* error handling */
 char *strcat_cd(dshell *, char *, char *, char *);
 char *error_get_cd(dshell *datash);
