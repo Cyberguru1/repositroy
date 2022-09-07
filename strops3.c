@@ -53,7 +53,7 @@ char *_strdup(char *s1)
  * @del: input delimeter to compare(also an array)
  * Return: 1 on sucess
  */
-int cmpChar(char str1[], const char *del)
+int cmp_Char(char str1[], const char *del)
 {
 	unsigned int i, j, k;
 
