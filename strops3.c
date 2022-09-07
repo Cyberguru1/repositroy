@@ -37,15 +37,14 @@ int _strncmp(char *s1, char *s2, size_t n)
 	 i = _strlen(s1);
 
 	 if((s2 = malloc(sizeof(char) * (i + 1))) == NULL)
-		 return NULL;
+		 return (NULL);
 
 	 for (x = 0; x < i; x++)
 	 {
 		 s1[x] = s2[x];
 	 }
 	 s2[x] = '\0';
-
-	return s2;
+     return (s2);
 }
 /**
  * cmpChar - comapres each char in a string

@@ -60,7 +60,7 @@ int _isdigit(const char *s)
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] < 48 || s[i] > 57)
-			   return (0);
+		return (0);
 	}
 	return (1);
 }
@@ -78,11 +78,11 @@ char *_strchr(char *s, char c)
 	for (; *(s + i) != '\0'; i++)
 	{
 		if (*(s + i) == c)
-		 return (s + i);
+		return (s + i);
 	}
 
 	if (*(s + i) == c)
-	   return (s + i);
+	return (s + i);
 	return ('\0');
 }
 /**
