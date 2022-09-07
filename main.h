@@ -148,6 +148,7 @@ int cmd_exec(dshell *datash);
 void get_sigint(int sig);
 int exit_shell(dshell *datash);
 int exec_line(dshell *datash);
+int (*get_builtin(char *cmd))(dshell *);
 
 /* help.c */
 void aux_help_env(void);
