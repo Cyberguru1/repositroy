@@ -9,10 +9,8 @@
 char **parse_cmd(char *input)
 {   char **tokens, *token;
 	int i;
-	char delim[5] = "\n ";
 
 	i = 0;
-
 	if (input == NULL)
 	return (NULL);
 	tokens = malloc(sizeof(char) * BUFFSIZE);
@@ -22,12 +20,12 @@ char **parse_cmd(char *input)
 		return (NULL);
 	}
 
-	token = _strtok(input, delim);
+	token = _strtok(input, TOK_BUFSIZE);
 
 	while (token != NULL)
 	{
 		tokens[i] = token;
-		token = _strtok(NULL, delim);
+		token = _strtok(NULL, TOK_BUFSIZE);
 		i++;
 	}
 	return (tokens);
