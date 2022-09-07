@@ -150,6 +150,12 @@ int exit_shell(dshell *datash);
 int exec_line(dshell *datash);
 int (*get_builtin(char *cmd))(dshell *);
 
+/* env_ops.c */
+void check_env(r_var **h, char *in, dshell *data);
+int check_vars(r_var **h, char *in, char *st, dshell *data);
+char *replaced_input(r_var **head, char *input, char *new_input, int nlen);
+char *rep_var(char *input, dshell *datash);
+
 /* help.c */
 void aux_help_env(void);
 void aux_help_setenv(void);
