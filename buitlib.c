@@ -19,7 +19,7 @@ int geetlen(int n)
 	{
 		x = n;
 	}
-	while (n > 9)
+	while (x > 9)
 	{
 		length++;
 		x = x / 10;
