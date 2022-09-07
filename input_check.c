@@ -31,24 +31,28 @@ int error_sep_op(char *input, int i, char last)
 
 	if (*input == ';')
 	  if (last == '|' || last == '&' || last == ';')
-		return (i);
+	  return (i);
 	if (*input == '|')
 	{
-		 if (last == ';' || last == '&') return (i);
+		 if (last == ';' || last == '&')
+		 return (i);
 		 if (last == '|')
 		 {
 			 count = repeated_char(input, 0);
-			 if (count == 0 || count > 1) return (i);
+			 if (count == 0 || count > 1)
+			 return (i);
 		 }
 	}
 	if (*input == '&')
 	{
-		if (last == ';' || last == '|') return (i);
+		if (last == ';' || last == '|')
+		return (i);
 
 		if (last == '&')
 		{
 			count = repeated_char(input, 0);
-			if (count == 0 || count > 1) return (i);
+			if (count == 0 || count > 1)
+			return (i);
 		}
 	}
 	return (error_sep_op(input + 1, i + 1, *input));
@@ -67,10 +71,10 @@ int first_char(char *input, int *i)
 	for (*i = 0; input[*i]; *i += 1)
 	{
 		if (input[*i] == ' ' || input[*i] == '\t')
-			continue;
+		continue;
 
 		if (input[*i] == ';' || input[*i] == '|' || input[*i] == '&')
-			return (-1);
+		return (-1);
 
 		break;
 	}
