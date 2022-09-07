@@ -7,8 +7,8 @@
 int geetlen(int n)
 {
 	unsigned int x;
-	int length = 1;
 	
+	int length = 1;
 	if (n < 0)
 	{
 		length++;
@@ -40,7 +40,7 @@ int _atoi(char *s)
 		if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
 		break;
 
-		if(*(s + count) == '-')
+		if (*(s + count) == '-')
 			pn *= -1;
 
 		if ((*(s + count) >= '0') && (*(s + count) <= '0'))
