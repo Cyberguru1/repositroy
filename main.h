@@ -82,11 +82,6 @@ typedef struct r_var_list
 ssize_t get_line(char **buff, size_t *buffsize, FILE *fp);
 char *read_line(int *i_eof);
 
-/* strtoken */
-unsigned int check_delimeter(char c, const char *str);
-char *_strtok(char *str, const char *delim);
-char **parse_cmd(char *input);
-
 /* memory management */
 void _memcpy(void *newptr, const void *ptr, unsigned int size);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
@@ -101,8 +96,10 @@ char *_strcpy(char *dest, char *src);
 char *_strncpy(char *dest, char *src, int n);
 int _strlen(char *s);
 int _strcmp(char *first_str, char *second_str);
+
 int _strncmp(char *s1, char *s2, size_t n);
 char *_strndup(char *s1, char *s2);
+char *_strtok(char *str, const char *delim);
 
 void revstr(char *s);
 int cmp_Chars(char str1[], const char *del);
