@@ -12,7 +12,7 @@
 #include <limits.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
-#include <readline/readline.h>
+#include <readline.h>
 
 #define BUFFSIZE 1024
 #define TOK_BUFSIZE 128
