@@ -15,7 +15,7 @@ char **parse_cmd(char *input)
 
 	if (input == NULL)
 	return (NULL);
-    tokens = malloc(sizeof(char) * BUFFSIZE);
+	tokens = malloc(sizeof(char) * BUFFSIZE);
 	if (tokens == NULL)
 	{
 		perror("hsh");
