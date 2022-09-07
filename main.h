@@ -201,4 +201,6 @@ void cd_previous(dshell *datash);
 void cd_to_home(dshell *datash);
 int cd_shell(dshell *datash);
 
+void shell_loop(dshell *datash);
+
 #endif
