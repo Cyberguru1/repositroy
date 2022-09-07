@@ -8,8 +8,8 @@
 int _strspn(char *s, char *a)
 {
 	int i, j, bool;
-    
-    for (i = 0; *(s + i) != '\0'; i++)
+	
+	for (i = 0; *(s + i) != '\0'; i++)
 	{
 		bool = 1;
 		for (j = 0; *(a + j) != '\0'; j++)
@@ -23,7 +23,7 @@ int _strspn(char *s, char *a)
 		if (bool == 1)
 		break;
 	}
-    return (1);
+	return (1);
 }
 /**
  * _strcat - combines two strings
@@ -33,7 +33,7 @@ int _strspn(char *s, char *a)
  */
 char *_strcat(char *s1, const char *s2)
 {
-	int i,j;
+	int i, j;
 
 	for (i = 0; s1[i] != '\0'; i++)
 	;
@@ -108,6 +108,5 @@ char *_strncpy(char *dest, char *src, int n)
 		*(dest + i) = '\0';
 		i++;
 	}
-	return dest;
-
+	return (dest);
 }
