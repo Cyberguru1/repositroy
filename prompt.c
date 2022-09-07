@@ -48,7 +48,7 @@ void shell_loop(dshell *datash)
 	loop = 1;
 	while (loop == 1)
 	{
-		write(STDIN_FILENO, "$ ", 2);
+		write(STDIN_FILENO, "($) ", 4);
 		input = read_line(&i_eof);
 		if (i_eof != -1)
 		{
