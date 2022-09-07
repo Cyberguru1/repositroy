@@ -206,3 +206,4 @@ int cd_shell(dshell *datash)
 	cd_to(datash);
 
 	return (1);
+}
