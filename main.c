@@ -59,7 +59,7 @@ void set_data(dshell *datash, char **av)
  */
 int main(int ac, char **av)
 {
-	data_shell datash;
+	dshell datash;
 	(void) ac;
 
 	signal(SIGINT, get_sigint);
