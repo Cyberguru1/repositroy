@@ -7,16 +7,17 @@
  */
 
 char **parse_cmd(char *input)
-{
-    char **tokens, *token;
+{   char **tokens, *token;
     int i;
     char delim[5] = "\n ";
 
     i = 0;
 
-    if (input == NULL)
+    if (input == NULL){
        return NULL;
-    if ((tokens = malloc(sizeof(char) * BUFFSIZE)) == NULL)
+    }
+    tokens = malloc(sizeof(char) * BUFFSIZE);
+    if (tokens == NULL)
     {  perror("hsh");
        return NULL;
     }
