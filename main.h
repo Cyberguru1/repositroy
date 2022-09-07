@@ -37,9 +37,7 @@ typedef struct data
 	int counter;
 	char **_environ;
 	char *pid;
-}dshell;
-
-
+} dshell;
 /**
  * struct sep_list_s - single linked list
  * @separator: ; | &
