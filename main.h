@@ -89,8 +89,6 @@ char **_reallocdp(char **ptr, unsigned int old_size, unsigned int new_size);
 
 
 /* strops */
-int _putchar(char c);
-void _puts(char *str);
 char *_strcpy(char *dest, char *src);
 
 char *_strncpy(char *dest, char *src, int n);
