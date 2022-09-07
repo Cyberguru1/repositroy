@@ -75,7 +75,6 @@ char *_itoa(int n)
 	if (buffer == NULL)
 		return (NULL);
 	*(buffer + length) = '\0';
-
 	if (n < 0)
 	{
 		x = n * -1;
