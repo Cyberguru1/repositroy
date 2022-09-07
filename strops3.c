@@ -37,6 +37,7 @@ char *_strdup(char *s1)
 	 
 	 i = _strlen(s1);
 	 s2 = malloc(sizeof(char) * (i + 1));
+	 
 	 if (s2 == NULL)
 	 return (NULL);
 
@@ -77,11 +78,10 @@ int cmpChar(char str1[], const char *del)
  * Return: void
  */
 void revstr(char *s)
-{
-	int i, x;
+{	int i, x;
 	char temp;
 	
-	i = 0; 
+	i = 0;
 
 	while (s[i] != '\0')
 	{
@@ -90,8 +90,8 @@ void revstr(char *s)
 
 	for (x = 0; x <= ((i - 1) / 2); x++)
 	{
-		temp = *(s + (i - x -1));
-		*(s + (i - x -1)) =  *(s + x);
+		temp = *(s + (i - x - 1));
+		*(s + (i - x - 1)) =  *(s + x);
 		*(s + x) = temp;
 	}
 }
