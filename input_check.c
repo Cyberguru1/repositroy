@@ -7,11 +7,11 @@
  */
 int repeated_char(char *input, int i)
 {
-    if(*(input - i) == *input)
-       return (repeated_char(input - 1, i + 1));
-    return (i);
+	if (*(input - i) == *input)
+	return (repeated_char(input - 1, i + 1));
+	
+	return (i);
 }
-
 /**
  * error_sep_op - finds inputed syntax errrors
  * @input: input string
@@ -21,38 +21,38 @@ int repeated_char(char *input, int i)
  */
 int error_sep_op(char *input, int i, char last)
 {
-    int count;
+	int count;
 
-    count = 0;
-    if (*input == '\0')
-      return (0);
-    
-    if (*input == ' ' || * input == '\t')
-       return (error_sep_op(input + 1, i + 1, last));
+	count = 0;
+	if (*input == '\0')
+	return (0);
+	
+	if (*input == ' ' || * input == '\t')
+	   return (error_sep_op(input + 1, i + 1, last));
 
-    if (*input == ';')
-      if (last == '|' || last == '&' || last == ';')
-        return (i);
-    if (*input == '|')
-    {
-         if (last == ';' || last == '&') return (i);
-         if (last == '|')
-         {
-             count = repeated_char(input, 0);
-             if (count == 0 || count > 1) return (i);
-         }
-    }
-    if (*input == '&')
-    {
-        if (last == ';' || last == '|') return (i);
+	if (*input == ';')
+	  if (last == '|' || last == '&' || last == ';')
+		return (i);
+	if (*input == '|')
+	{
+		 if (last == ';' || last == '&') return (i);
+		 if (last == '|')
+		 {
+			 count = repeated_char(input, 0);
+			 if (count == 0 || count > 1) return (i);
+		 }
+	}
+	if (*input == '&')
+	{
+		if (last == ';' || last == '|') return (i);
 
-        if (last == '&')
-        {
-            count = repeated_char(input, 0);
-            if (count == 0 || count > 1) return (i);
-        }
-    }
-    return (error_sep_op(input + 1, i + 1, *input));
+		if (last == '&')
+		{
+			count = repeated_char(input, 0);
+			if (count == 0 || count > 1) return (i);
+		}
+	}
+	return (error_sep_op(input + 1, i + 1, *input));
 
 }
 /**
@@ -134,7 +134,6 @@ void print_syntax_error(dshell *datash, char *input, int i, int bool)
 /**
  * check_syntax_error - intermediate function to
  * find and print a syntax error
- *
  * @datash: data structure
  * @input: input string
  * Return: 1 if there is an error. 0 in other case
@@ -158,6 +157,5 @@ int check_syntax_error(dshell *datash, char *input)
 		print_syntax_error(datash, input, begin + i, 1);
 		return (1);
 	}
-
 	return (0);
 }
