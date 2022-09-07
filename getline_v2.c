@@ -24,7 +24,7 @@ ssize_t get_line(char **buff, size_t *buffsize, FILE *fp)
 		if (c == -1)
 		{
 			if (feof(fp))
-			return ptr == *buff ? -1 : ptr - *buff;
+			return (ptr == *buff ? -1 : ptr - *buff);
 			else
 			return (-1);
 		}
